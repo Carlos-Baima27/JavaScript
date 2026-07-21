@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Produtos</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body class="bg-secondary text-light">
+    <div class="container">
+      <!-- Button do modal -->
+      <button
+        type="button"
+        class="btn btn-primary"
+        data-bs-toggle="modal"
+        data-bs-target="#exampleModal"
+      >
+        Cadastrar Produto
+      </button>
+
+      <h1 class="text-center my-4">Produtos</h1>
+
+      <div class="row" id="produtos"></div>
+      <table
+        class="table table-striped table-hover table-bordered border-light table-responsive"
+        id="table_produtos"
+      >
+        <thead class="table-dark">
+          <tr class="text-center">
+            <th>Id</th>
+            <th>Produto</th>
+            <th>Quantidade</th>
+            <th>Valor Un.</th>
+            <th>Valor Total</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <!-- Modal para adicionar produto -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Cadastrar Produto</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body"><div>
+            <div class="mb-3">
+              <label for="nome" class="form-label">Nome</label>
+              <input
+                type="text"
+                class="form-control"
+                id="nome"
+                name="nome"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="preco" class="form-label">Preço</label>
+              <input
+                type="number" 
+                class="form-control"
+                id="preco"
+                name="preco"
+                step="0.01"
+              />
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="quantidade" class="form-label">Quantidade</label>
+            <input
+              type="number"
+              class="form-control"
+              id="quantidade"
+              name="quantidade"
+              step="0.01"
+            />
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Cancelar
+            </button>
+            <button type="button" class="btn btn-primary" onclick="cadastrarProduto()">Salvar Produto</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="index5.js"></script>
+  </body>
+</html>
